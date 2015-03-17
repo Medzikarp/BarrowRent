@@ -4,7 +4,6 @@
  */
 package ImplTests;
 
-
 import java.util.Date;
 import java.util.Arrays;
 import java.util.Collections;
@@ -37,7 +36,7 @@ public class CustomerManagerImplTest {
     
 
     @Test
-    public void createCustomer() throws ParseException {
+    public void createCustomer()  {
         
 
         
@@ -53,7 +52,7 @@ public class CustomerManagerImplTest {
     }
 
     @Test
-    public void getContact() throws ParseException {
+    public void getContact()  {
         
         assertNull(manager.getCustomerById(1l));
 
@@ -68,7 +67,7 @@ public class CustomerManagerImplTest {
     }
 
     @Test
-    public void getAllContacts() throws ParseException {
+    public void getAllContacts()  {
 
         assertTrue(manager.findAllCustomers().isEmpty());
 
@@ -348,7 +347,7 @@ public class CustomerManagerImplTest {
         }
     };
 
-    public Date setDateDefault() {
+    private Date setDateDefault() {
         try {
             String dateInString = "22-01-1986";
             Date date = sdf.parse(dateInString);
